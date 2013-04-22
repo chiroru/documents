@@ -62,6 +62,12 @@ module Fulcrum
 
       $ RAILS_ENV=production bundle exec rake assets:precompile
 
+## パスワードの設定
+
+ # rails console
+ ※ consoleからのアクセス時は、development環境の設定が使われるためconfig/database.ymlのdevelopment設定を正しく行う。
+ > User.first.confirm!
+ > User.first.update_attributes!(:password => 'pass')
 
 ## 参考
 * http://d.hatena.ne.jp/akishin999/20130130/1359501604
